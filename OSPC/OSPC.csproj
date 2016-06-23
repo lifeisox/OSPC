@@ -1,0 +1,370 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FC41CC19-B57E-40BC-A409-279BF50F06B2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OSPC</RootNamespace>
+    <AssemblyName>OSPC</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>OSPC.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="MultiBoxControls">
+      <HintPath>..\..\MultiBoxControls\MultiBoxControls\obj\x86\Release\MultiBoxControls.exe</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.6.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DateDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DateDialog.Designer.cs">
+      <DependentUpon>DateDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyDB.cs" />
+    <Compile Include="OSPCBackup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OSPCBackup.Designer.cs">
+      <DependentUpon>OSPCBackup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSPCBeliever.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OSPCBeliever.Designer.cs">
+      <DependentUpon>OSPCBeliever.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSPCBudget.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OSPCBudget.Designer.cs">
+      <DependentUpon>OSPCBudget.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSPCCheque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OSPCCheque.Designer.cs">
+      <DependentUpon>OSPCCheque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSPCConfigure.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OSPCConfigure.Designer.cs">
+      <DependentUpon>OSPCConfigure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSPCDepositForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OSPCDepositForm.Designer.cs">
+      <DependentUpon>OSPCDepositForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSPCReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OSPCReport.Designer.cs">
+      <DependentUpon>OSPCReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSPCDataSet.cs">
+      <DependentUpon>OSPCDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OSPCDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OSPCDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OSPCMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OSPCMain.Designer.cs">
+      <DependentUpon>OSPCMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSPCModules.cs" />
+    <Compile Include="OSPCOffering.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OSPCOffering.Designer.cs">
+      <DependentUpon>OSPCOffering.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="OSPCSimpleReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OSPCSimpleReport.Designer.cs">
+      <DependentUpon>OSPCSimpleReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSPCExpense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OSPCExpense.Designer.cs">
+      <DependentUpon>OSPCExpense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OSPCActual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OSPCActual.Designer.cs">
+      <DependentUpon>OSPCActual.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DateDialog.resx">
+      <DependentUpon>DateDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OSPCBackup.resx">
+      <DependentUpon>OSPCBackup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OSPCBeliever.resx">
+      <DependentUpon>OSPCBeliever.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OSPCBudget.resx">
+      <DependentUpon>OSPCBudget.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OSPCCheque.resx">
+      <DependentUpon>OSPCCheque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OSPCConfigure.resx">
+      <DependentUpon>OSPCConfigure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OSPCDepositForm.resx">
+      <DependentUpon>OSPCDepositForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OSPCReport.resx">
+      <DependentUpon>OSPCReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RptDailyOffering.rdlc" />
+    <EmbeddedResource Include="OSPCMain.resx">
+      <DependentUpon>OSPCMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OSPCOffering.resx">
+      <DependentUpon>OSPCOffering.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RptDailyReport.rdlc" />
+    <EmbeddedResource Include="OSPCSimpleReport.resx">
+      <DependentUpon>OSPCSimpleReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RptDepositForm.rdlc" />
+    <EmbeddedResource Include="OSPCExpense.resx">
+      <DependentUpon>OSPCExpense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RptDuringOffering.rdlc" />
+    <EmbeddedResource Include="RptPersonOffering.rdlc" />
+    <EmbeddedResource Include="RptHalfYear.rdlc" />
+    <EmbeddedResource Include="RptDuringReport.rdlc" />
+    <EmbeddedResource Include="RptReceipt.rdlc" />
+    <EmbeddedResource Include="RptBookCash.rdlc" />
+    <EmbeddedResource Include="OSPCActual.resx">
+      <DependentUpon>OSPCActual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RptActual.rdlc" />
+    <EmbeddedResource Include="RptBirthDate.rdlc" />
+    <EmbeddedResource Include="RptBelievers.rdlc" />
+    <None Include="app.config" />
+    <None Include="OSPCDataSet.xsc">
+      <DependentUpon>OSPCDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="OSPCDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OSPCDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="OSPCDataSet.xss">
+      <DependentUpon>OSPCDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NavForward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saveHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddToFavoritesHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddTableHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CancelApproval_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StopHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteFolderHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WarningHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile%28x86 및 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EditCodeHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PrintPreviewHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PlayHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DialHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FunctionHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GoToNextHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GoToNextRecord.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewWindow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PrintPreviewHS1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book_reportHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Book_angleHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book_addressHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DiscardChanges.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ExpirationHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alerts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RestartHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RefreshDocViewHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SaveAllHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FillUpHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PushpinHS.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
